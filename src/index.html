@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>toby的前端sdk</title>
+    <link rel="stylesheet" href="app.css">
 </head>
 
 <body>
@@ -18,7 +19,16 @@
         function errorClick() {
             window.someVar.error = 'error'
         }
+        function promiseErrorClick() {
+            new Promise((resolve, reject) => {
+                window.someVar.error = 'error'
+                // reject('promise error')
+            }).then(res => {
+                console.log(res)
+            })
+        }
     </script>
+
 </body>
 
 </html>
