@@ -5,36 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>toby的前端sdk</title>
-    <link rel="stylesheet" href="app.css">
 </head>
 
 <body>
     <div id="container">
-        <input id="successBtn" type="button" value="ajax成功请求" onclick="sendSuccess()">
-        <input id="errorBtn" type="button" value="ajax失败请求" onclick="sendError()">
+        <div class="content" style="width: 600px;word-wrap: break-word;">
+        </div>
     </div>
     <script>
-        function sendSuccess() {
-            let xhr = new XMLHttpRequest;
-            xhr.open('GET', '/success', true);
-            xhr.responseType = 'json';
-            xhr.onload = function () {
-                console.log(xhr.response);
-            }
-            xhr.send();
-        }
-        function sendError() {
-            let xhr = new XMLHttpRequest;
-            xhr.open('Post', '/error', true);
-            xhr.responseType = 'json';
-            xhr.onload = function () {
-                console.log(xhr.response);
-            }
-            xhr.onerror = function (error) {
-                console.log(error);
-            }
-            xhr.send("name=toby");
-        }
+        let content = document.getElementsByClassName('content')[0];
+        // content.innerHTML = '<span>@</span>'.repeat(10000);
+
     </script>
 
 </body>
