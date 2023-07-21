@@ -13,8 +13,13 @@
         </div>
     </div>
     <script>
-        let content = document.getElementsByClassName('content')[0];
-        // content.innerHTML = '<span>@</span>'.repeat(10000);
+        setTimeout(() => {
+            let content = document.getElementsByClassName('content')[0];
+            let h1 = document.createElement('h1');
+            h1.innerHTML = '我是这个页面中最有意义的内容';
+            h1.setAttribute('elementtiming', 'meaningful');
+            content.appendChild(h1);
+        }, 2000);
 
     </script>
 
